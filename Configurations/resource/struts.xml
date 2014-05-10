@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+
+	<constant name="struts.action.extension" value="html"/>
+	<constant name="struts.devMode" value="true" />	
+	 
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="Welcome">
+			<result>pages/Welcome.jsp</result>
+		</action>		
+	</package>
+	<package name="admin" namespace="/admin" extends="struts-default">
+		<action name="Welcome">
+			<result>pages/Welcome.jsp</result>
+		</action>		
+	</package>
+	<package name="visitor" namespace="/visitor" extends="struts-default">
+		<action name="Welcome">
+			<result>pages/Welcome.jsp</result>
+		</action>		
+	</package>	
+</struts>
