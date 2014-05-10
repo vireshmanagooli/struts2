@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.custom.i18n.resources" value="global" />
+
+	<package name="user" namespace="/user" extends="struts-default">
+		<action name="login">
+			<result>pages/login.jsp</result>
+		</action>
+		<action name="validateUser" class="org.example.actionform.LoginAction">
+			<result name="SUCCESS">pages/welcome.jsp</result>
+			<result name="input">pages/login.jsp</result>
+		</action>
+	</package>
+</struts>
