@@ -10,12 +10,12 @@
 		
 		<action name="addCustomerAction" 
 			class="org.example.struts2hibernate.action.CustomerAction" method="addCustomer" >
-		    <result name="success">pages/customer.jsp</result>
+		    <result name="success">customer.jsp</result>
 		</action>
 	
 		<action name="listCustomerAction" 
 			class="org.example.struts2hibernate.action.CustomerAction" method="listCustomer" >
-		    <result name="success">pages/customer.jsp</result>
+		    <result name="success">customer.jsp</result>
 		</action>
 		
 	</package>

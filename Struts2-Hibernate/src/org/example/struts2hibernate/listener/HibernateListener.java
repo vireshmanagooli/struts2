@@ -6,11 +6,11 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.AnnotationConfiguration;
  
 public class HibernateListener implements ServletContextListener{
  
-	private Configuration config;
+	private AnnotationConfiguration config;
     private SessionFactory factory;
     private String path = "/hibernate.cfg.xml";
     private static Class<HibernateListener> clazz = HibernateListener.class;
@@ -33,7 +33,7 @@ public class HibernateListener implements ServletContextListener{
 		try {
 			 
 	         URL url = HibernateListener.class.getResource(path);
-	         config = new Configuration().configure(url);
+	         config = new AnnotationConfiguration().configure(url);
 	         factory = config.buildSessionFactory();
 	         
 	         //save the Hibernate session factory into serlvet context
